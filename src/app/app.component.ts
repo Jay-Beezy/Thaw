@@ -7,23 +7,31 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   columnDefs = [
-    { field: 'Day', width: 100 },
-    { field: 'date', width: 150 },
+    {
+      field: 'daysOut',
+      width: 125,
+      cellStyle: { fontSize: '20px' },
+    },
+    {
+      field: 'futureDate',
+      width: 150,
+      cellStyle: { fontSize: '20px' },
+    },
   ];
 
   rowData = [
-    { Day: '5', date: this.daysAhead(5) },
-    { Day: '6', date: this.daysAhead(6) },
-    { Day: '7', date: this.daysAhead(7) },
-    { Day: '8', date: this.daysAhead(8) },
-    { Day: '10', date: this.daysAhead(10) },
-    { Day: '14', date: this.daysAhead(14) },
-    { Day: '18', date: this.daysAhead(18) },
-    { Day: '21', date: this.daysAhead(21) },
-    { Day: '30', date: this.daysAhead(30) },
-    { Day: '40', date: this.daysAhead(40) },
-    { Day: '45', date: this.daysAhead(45) },
-    { Day: '90', date: this.daysAhead(90) },
+    { daysOut: '5', futureDate: this.daysAhead(5) },
+    { daysOut: '6', futureDate: this.daysAhead(6) },
+    { daysOut: '7', futureDate: this.daysAhead(7) },
+    { daysOut: '8', futureDate: this.daysAhead(8) },
+    { daysOut: '10', futureDate: this.daysAhead(10) },
+    { daysOut: '14', futureDate: this.daysAhead(14) },
+    { daysOut: '18', futureDate: this.daysAhead(18) },
+    { daysOut: '21', futureDate: this.daysAhead(21) },
+    { daysOut: '30', futureDate: this.daysAhead(30) },
+    { daysOut: '40', futureDate: this.daysAhead(40) },
+    { daysOut: '45', futureDate: this.daysAhead(45) },
+    { daysOut: '90', futureDate: this.daysAhead(90) },
   ];
 
   getMonth(day) {
@@ -143,10 +151,10 @@ export class AppComponent {
     let targetDate = new Date();
     targetDate.setDate(targetDate.getDate() + day);
     let current_day = targetDate.getDate();
-    let current_month = targetDate.getMonth() + 1; //Had to add 1 since otherwise wrong?
+    let current_month = targetDate.getMonth() + 1; //0 is January
     let current_year = targetDate.getFullYear();
     let testy = this.getMonth(current_month);
-    let dateString = testy + ' ' + current_day + ' ' + current_year + '';
+    let dateString = testy + ' ' + current_day; // + ' ' + current_year + '';
     return dateString;
   }
 }

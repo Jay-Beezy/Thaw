@@ -1,13 +1,7 @@
-p {
-  font-family: Lato;
-}
-
-.item-center {
+.ag-theme-alpine {
+  font-size: 20px;
+  text-align: center;
   align-items: center;
-  justify-items: center;
-}
-
-.ag-header-cell-label {
   justify-content: center;
 }
 
@@ -25,6 +19,16 @@ ag-grid-angular {
   --ag-foreground-color: #000000;
   --ag-odd-row-background-color: ;
   --ag-header-background-color: #c9c9c9;
+  text-align: center;
+  width: 100%;
+  height: 500px;
+}
 
-  font-size: 14px;
+ag-theme-alpine .ag-header-cell-text {
+  text-align: center;
+  justify-content: center;
+}
+
+.ag-header-cell-label {
+  justify-content: center;
 }
