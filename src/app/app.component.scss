@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,700;1,700&family=Shrikhand&display=swap');
+
 .ag-theme-alpine {
   font-size: 20px;
   text-align: center;
@@ -7,18 +10,19 @@
 
 .title {
   font-size: 175%;
-  font-family: Georgia;
+  font-family: 'Shrikhand', cursive;
   padding-top: 10px;
   padding-bottom: 10px;
-  color: #000000;
+  color: #e2ec4e;
   padding: 20px 0px;
 }
 
 ag-grid-angular {
-  --ag-background-color: #6cc24a;
-  --ag-foreground-color: #000000;
+  --ag-background-color: #128b22;
+  --ag-foreground-color: #e2ec4e;
   --ag-odd-row-background-color: ;
-  --ag-header-background-color: #c9c9c9;
+  --ag-header-background-color: #128b22;
+  font-family: 'Amaranth', sans-serif !important;
   text-align: center;
   width: 100%;
   height: 500px;
@@ -26,9 +30,5 @@ ag-grid-angular {
 
 ag-theme-alpine .ag-header-cell-text {
   text-align: center;
-  justify-content: center;
-}
-
-.ag-header-cell-label {
   justify-content: center;
 }
